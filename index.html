@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ahmed & Nermeen | Wedding Invitation</title>
+<style>
+:root{--ivory:#f7f4eb;--sage:#66725d;--sage2:#8e9b82;--gold:#b58b52;--ink:#3f463d}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:Georgia,"Times New Roman",serif;overflow-x:hidden}
+section{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:70px 24px;position:relative}
+.card{text-align:center;max-width:760px;width:100%;position:relative;z-index:2}
+.eyebrow{letter-spacing:.28em;text-transform:uppercase;font-size:12px;color:var(--gold)}
+h1{font-size:clamp(52px,12vw,94px);font-weight:400;line-height:.92;margin:20px 0;color:var(--sage)}
+.amp{color:var(--gold);font-style:italic}
+.date{font-size:18px;letter-spacing:.2em;margin:25px 0}
+.goldline{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);max-width:420px;margin:28px auto}
+button,.btn{border:1px solid var(--gold);background:transparent;color:var(--ink);padding:14px 28px;border-radius:999px;font:inherit;letter-spacing:.08em;text-decoration:none;display:inline-block;cursor:pointer}
+button:hover,.btn:hover{background:rgba(181,139,82,.08)}
+.ar{font-family:Tahoma,Arial,sans-serif;line-height:2}
+.ayah{font-size:clamp(21px,5vw,32px);max-width:700px;margin:auto}
+.big{font-size:clamp(30px,7vw,54px);color:var(--sage);font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:35px auto;max-width:600px}
+.time{border-top:1px solid #cdbb99;border-bottom:1px solid #cdbb99;padding:18px 6px}
+.num{font-size:34px;color:var(--sage)} .lab{font-family:Tahoma,Arial,sans-serif;font-size:12px}
+.floral{position:absolute;width:280px;height:280px;opacity:.18;border:1px solid var(--gold);border-radius:50% 5% 50% 5%;transform:rotate(35deg)}
+.f1{top:-120px;left:-120px}.f2{bottom:-130px;right:-120px;transform:rotate(215deg)}
+.leaf{position:absolute;width:120px;height:220px;border:1px solid var(--sage2);border-radius:100% 0 100% 0;opacity:.14}
+.l1{left:-40px;bottom:8%;transform:rotate(-25deg)}.l2{right:-50px;top:12%;transform:rotate(150deg)}
+.reveal{opacity:0;transform:translateY(25px);transition:1s ease}.reveal.show{opacity:1;transform:none}
+#cover{position:fixed;inset:0;z-index:20;background:var(--ivory);display:flex;align-items:center;justify-content:center;transition:1s ease}
+#cover.hide{opacity:0;pointer-events:none}
+.note{font-size:13px;opacity:.7;margin-top:18px}
+.music{position:fixed;left:18px;bottom:18px;z-index:10;width:44px;height:44px;padding:0;border-radius:50%;background:rgba(247,244,235,.9);display:none}
+@media(max-width:520px){.grid{grid-template-columns:repeat(2,1fr)}section{padding:55px 20px}}
+</style>
+</head>
+<body>
+<div id="cover">
+ <div class="card">
+  <div class="eyebrow">Wedding Invitation</div>
+  <h1>Ahmed <span class="amp">&</span><br>Nermeen</h1>
+  <div class="goldline"></div>
+  <div class="date">07 • 08 • 2026</div>
+  <button id="enter">فتح الدعوة</button>
+  <div class="note ar">اضغط لفتح الدعوة</div>
+ </div>
+</div>
+
+<button class="music" id="musicBtn" aria-label="تشغيل أو إيقاف التلاوة">♪</button>
+<audio id="audio" preload="auto"><source src="audio.mp3" type="audio/mpeg"></audio>
+
+<section>
+ <i class="floral f1"></i><i class="leaf l2"></i>
+ <div class="card reveal">
+  <div class="eyebrow">Together with their families</div>
+  <h1>Ahmed <span class="amp">&</span> Nermeen</h1>
+  <div class="goldline"></div>
+  <p class="ar">بفضل من الله ورعايته يسرنا دعوتكم<br>لمشاركتنا فرحتنا في زفافنا</p>
+  <div class="date">FRIDAY · 07 AUGUST 2026 · 6:00 PM</div>
+ </div>
+</section>
+
+<section>
+ <i class="leaf l1"></i>
+ <div class="card reveal">
+  <div class="eyebrow">مَوَدَّةً وَرَحْمَةً</div>
+  <div class="goldline"></div>
+  <p class="ayah ar">﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ ﴾</p>
+  <p class="ar">سورة الروم · الآية ٢١</p>
+ </div>
+</section>
+
+<section>
+ <i class="floral f2"></i>
+ <div class="card reveal">
+  <div class="eyebrow">Save The Date</div>
+  <h2 class="big">The Countdown</h2>
+  <div class="grid">
+   <div class="time"><div class="num" id="days">0</div><div class="lab">يوم</div></div>
+   <div class="time"><div class="num" id="hours">0</div><div class="lab">ساعة</div></div>
+   <div class="time"><div class="num" id="mins">0</div><div class="lab">دقيقة</div></div>
+   <div class="time"><div class="num" id="secs">0</div><div class="lab">ثانية</div></div>
+  </div>
+  <div class="date">07 • 08 • 2026 — 6:00 PM</div>
+ </div>
+</section>
+
+<section>
+ <i class="leaf l2"></i>
+ <div class="card reveal">
+  <div class="eyebrow">The Venue</div>
+  <h2 class="big ar">قاعة إلفين بلازا</h2>
+  <div class="goldline"></div>
+  <p class="ar">بنادي العاملين بجوار القرية الفرعونية<br>شارع البحر الأعظم</p>
+  <a class="btn ar" href="https://www.google.com/maps/search/?api=1&query=قاعة+إلفين+بلازا+القرية+الفرعونية+البحر+الأعظم" target="_blank" rel="noopener">فتح الموقع على الخريطة</a>
+ </div>
+</section>
+
+<section>
+ <i class="floral f1"></i>
+ <div class="card reveal">
+  <div class="eyebrow">With Love</div>
+  <h2 class="big">Ahmed <span class="amp">&</span> Nermeen</h2>
+  <div class="goldline"></div>
+  <p class="ar" style="font-size:24px">بحضوركم تتم فرحتنا</p>
+  <div class="date">07 · 08 · 2026</div>
+ </div>
+</section>
+
+<script>
+const cover=document.getElementById('cover'), audio=document.getElementById('audio'), musicBtn=document.getElementById('musicBtn');
+document.getElementById('enter').onclick=async()=>{cover.classList.add('hide');musicBtn.style.display='block';try{await audio.play()}catch(e){};setTimeout(()=>cover.style.display='none',1000)}
+musicBtn.onclick=()=>audio.paused?audio.play():audio.pause();
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.2});
+document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+const wedding=new Date('2026-08-07T18:00:00+03:00').getTime();
+function tick(){let d=Math.max(0,wedding-Date.now());let s=Math.floor(d/1000);days.textContent=Math.floor(s/86400);hours.textContent=Math.floor(s%86400/3600);mins.textContent=Math.floor(s%3600/60);secs.textContent=s%60}
+tick();setInterval(tick,1000);
+</script>
+</body></html>
